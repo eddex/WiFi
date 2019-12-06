@@ -10,8 +10,8 @@ for country in countries:
     print(code)
     response = requests.get('https://api.wigle.net/api/v2/stats/regions?country={}'.format(code)).json()
 
-    with open('{}stats_regions_{}_{}.json'.format(data_dir, code, country['name']), 'w+') as new_file:
-        json.dump(response, new_file)
+    with open('{}stats_regions_{}.json'.format(data_dir, code), 'w+') as new_file:
+        json.dump({ 'name': country['name'], 'code': response['country'], 'encryption': response['encryption'] }, new_file)
 
 # download wifi count for all countries
 response = requests.get('https://api.wigle.net/api/v2/stats/countries').json()

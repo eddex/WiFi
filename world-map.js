@@ -38,10 +38,43 @@ var svg = d3
   .attr("height", $("#map-holder").height())
   ;
 
+function createDataForCountryAsHtml(name, iso_a2, encryption_data) {
+  const container = document.createElement('div')
+
+  const title = document.createElement('h3')
+  title.innerText = name + " [" + iso_a2 + "]"
+  container.append(title)
+
+  /* note: encryption_data is a list of objects with a wep and a count attribute
+   * wep can be one of: 2, W, Y, N, ?
+   * 2 = WPA2
+   * W = WPA
+   * Y = WEP
+   * N = not encrypted
+   * ? = unknown
+   */
+  for (i = 0; i < encryption_data.length; i++) {
+    const p = document.createElement('p')
+    const encryption = encryption_data[i]
+    p.innerText = encryption.wep + ': ' + encryption.count
+    container.append(p)
+  }
+
+
+  return container
+}
+
 // show the details for a country in the sidebar
 function showDataForCountry(iso_a2) {
   // TODO: display details for country in #country-details container
   console.log(iso_a2 + " clicked")
+  fetch('data/stats_regions_' + iso_a2 + '.json')
+    .then(data => data.json()
+      .then(json => {
+        console.log(json)
+        const html = createDataForCountryAsHtml(json.name, json.code, json.encryption);
+        $('#country-details').html(html);
+  }))
 }
 
 
