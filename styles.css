@@ -1,0 +1,45 @@
+body {
+  background: #2A2C39;
+  color: #d0d0d0;
+}
+
+hr {
+  border-color: #d0d0d0;
+}
+
+.footer-padding {
+    padding-top: 1rem;
+}
+
+.map-holder {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    min-height: 40rem;
+}
+
+.country-details {
+  color: #2A2C39;
+}
+
+/* COPY PASTA */
+svg rect {
+    fill: #2A2C39;   /* map background colour */
+  }
+  .country{
+    fill: #d0d0d0;   /* country colour */
+    stroke: #2A2C39; /* country border colour */
+    stroke-width: 1; /* country border width */
+  }
+  .country-on{
+    fill: #4B5358;   /* highlight colour for selected country */
+  }
+  .countryLabel{
+    display: none;   /* hide all country labels by default */
+  }
+  .countryName{
+    fill: #000;   /* country label text colour */
+  }
+  .countryLabelBg{
+    fill: #30BCED;   /* country label background colour */
+  }
