@@ -38,15 +38,16 @@ var svg = d3
   .attr("height", $("#map-holder").height())
   ;
 
-function createDataForCountryAsHtml(name, iso_a2, encryption_data) {
+function createDataForCountryAsHtml(name, encryption_data) {
   const container = document.createElement('div')
 
   const title = document.createElement('h3')
-  title.innerText = name + " [" + iso_a2 + "]"
+  title.innerText = name
   container.append(title)
 
-  /* note: encryption_data is a list of objects with a wep and a count attribute
-   * wep can be one of: 2, W, Y, N, ?
+  /* note: encryption_data is a list of objects with a 'wep' and a 'count' attribute
+   * wep can be one of: 3, 2, W, Y, N, ?
+   * 3 = WPA3
    * 2 = WPA2
    * W = WPA
    * Y = WEP
@@ -72,8 +73,8 @@ function showDataForCountry(iso_a2) {
     .then(data => data.json()
       .then(json => {
         console.log(json)
-        const html = createDataForCountryAsHtml(json.name, json.code, json.encryption);
-        $('#country-details').html(html);
+        const detailsHtml = createDataForCountryAsHtml(json.name, json.encryption);
+        $('#country-details').html(detailsHtml);
   }))
 }
 
