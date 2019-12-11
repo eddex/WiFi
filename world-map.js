@@ -36,6 +36,7 @@ var svg = d3
   // set to the same size as the "map-holder" div
   .attr("width", $("#map-holder").width())
   .attr("height", $("#map-holder").height())
+  .attr("id", "world-map")
   ;
 
 function createDataForCountryAsHtml(name, encryption_data) {
@@ -54,13 +55,49 @@ function createDataForCountryAsHtml(name, encryption_data) {
    * N = not encrypted
    * ? = unknown
    */
+  const encryption_names = {
+    '3':'WPA3',
+    '2':'WPA2',
+    'W':'WPA',
+    'Y':'WEP',
+    'N':'None',
+    '?':'Unknown'
+  };
+  const secure_protocols = [
+    encryption_names['3'],
+    encryption_names['2'],
+    encryption_names['W']
+  ]
+
+  const insecure_protocols = [
+    encryption_names['Y'],
+    encryption_names['N']
+  ]
+
+  let total = 0;
+  let total_secure = 0;
+  let total_insecure = 0;
+
   for (i = 0; i < encryption_data.length; i++) {
-    const p = document.createElement('p')
-    const encryption = encryption_data[i]
-    p.innerText = encryption.wep + ': ' + encryption.count
+    const p = document.createElement('p');
+    const encryption = encryption_data[i];
+    const encryption_name = encryption_names[encryption.wep];
+    p.innerText = encryption_name + ': ' + encryption.count;
+
+    if (secure_protocols.includes(encryption_name)) {
+        total += encryption.count;
+        total_secure += encryption.count;
+
+    } else if (insecure_protocols.includes(encryption_name)) {
+      total += encryption.count;
+      total_insecure += encryption.count;
+    }
     container.append(p)
   }
 
+  const p_score = document.createElement('p');
+  p_score.innerText = 'Security Score: ' + Math.round((total_secure / total - total_insecure / total) * 100);
+  container.insertBefore(p_score, container.childNodes[1]);
 
   return container
 }
@@ -72,10 +109,10 @@ function showDataForCountry(iso_a2) {
   fetch('data/stats_regions_' + iso_a2 + '.json')
     .then(data => data.json()
       .then(json => {
-        console.log(json)
+        console.log(json);
         const detailsHtml = createDataForCountryAsHtml(json.name, json.encryption);
         $('#country-details').html(detailsHtml);
-  }))
+  }));
 }
 
 

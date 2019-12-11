@@ -7,6 +7,15 @@ hr {
   border-color: #d0d0d0;
 }
 
+p {
+  margin-bottom: 0.5rem;
+}
+
+td {
+  border: 1px solid #d0d0d0;
+  padding: 5px;
+}
+
 .footer-padding {
     padding-top: 1rem;
 }
@@ -16,10 +25,6 @@ hr {
     height: 100%;
     display: inline-block;
     min-height: 40rem;
-}
-
-.country-details {
-
 }
 
 /* COPY PASTA */
