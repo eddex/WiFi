@@ -71,15 +71,15 @@
         <p>We defined a network as secure, if the encryption is one of WPA3, WPA2 or WPA.</p>
         <p>Classified as insufficiently protected are networks with WEP encryption or open networks.</p>
         <p>Networks that have an unknown encryption are ignored.</p>
-        <p>Formula: <i>score = ( &#8721;secure_networks / &#8721;all_networks - &#8721;insecure_networks /
-            &#8721;all_networks) * 100</i>.</p>
-        <p>This gives a score between 100 and -100.</p>
+        <p>Formula: <i>score = ( ( (&#8721;secure_networks / &#8721;all_networks - &#8721;insecure_networks /
+            &#8721;all_networks) * 100 ) + 100 ) / 2</i>.</p>
+        <p>This gives a score between 0 and 100.</p>
         <p>
           <table>
             <tr>
               <td>Score: 100</td>
+              <td>Score: 50</td>
               <td>Score: 0</td>
-              <td>Score: -100</td>
             </tr>
             <tr>
               <td>All networks are secure.</td>

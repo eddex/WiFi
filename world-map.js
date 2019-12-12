@@ -121,6 +121,7 @@ function createPElementFor(name, count) {
     p.innerText = name + ': ' + count;
     return p;
   }
+  return '';
 }
 
 function createDataForCountryAsHtml(name, encryption_data) {
@@ -133,6 +134,7 @@ function createDataForCountryAsHtml(name, encryption_data) {
 
   const p_score = document.createElement('p');
   p_score.innerText = 'Security Score: ' + (Math.round((stats.total_secure / stats.total - stats.total_insecure / stats.total) * 100) + 100) / 2;
+  p_score.style = 'font-weight: bold;';
   container.append(p_score);
   console.log(stats)
   container.append(createPElementFor('WPA3', stats.wpa3));
@@ -140,6 +142,7 @@ function createDataForCountryAsHtml(name, encryption_data) {
   container.append(createPElementFor('WPA', stats.wpa));
   container.append(createPElementFor('WEP', stats.wep));
   container.append(createPElementFor('None', stats.none));
+  container.append(createPElementFor('Unknown', stats.unknown));
 
   return container
 }
