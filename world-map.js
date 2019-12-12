@@ -74,9 +74,11 @@ function createDataForCountryAsHtml(name, encryption_data) {
     encryption_names['N']
   ]
 
-  let total = 0;
-  let total_secure = 0;
-  let total_insecure = 0;
+  let stats = {
+    total: 0,
+    total_secure: 0,
+    total_insecure: 0
+  }
 
   for (i = 0; i < encryption_data.length; i++) {
     const p = document.createElement('p');
@@ -85,18 +87,22 @@ function createDataForCountryAsHtml(name, encryption_data) {
     p.innerText = encryption_name + ': ' + encryption.count;
 
     if (secure_protocols.includes(encryption_name)) {
-        total += encryption.count;
-        total_secure += encryption.count;
+      stats.total += encryption.count;
+      stats.total_secure += encryption.count;
 
     } else if (insecure_protocols.includes(encryption_name)) {
-      total += encryption.count;
-      total_insecure += encryption.count;
+      stats.total += encryption.count;
+      stats.total_insecure += encryption.count;
+      switch (encryption_name) {
+        case 'WEP':
+          stats.wep = encryption.count;
+      }
     }
     container.append(p)
   }
-
+  console.log(stats.wep)
   const p_score = document.createElement('p');
-  p_score.innerText = 'Security Score: ' + Math.round((total_secure / total - total_insecure / total) * 100);
+  p_score.innerText = 'Security Score: ' + Math.round((stats.total_secure / stats.total - stats.total_insecure / stats.total) * 100);
   container.insertBefore(p_score, container.childNodes[1]);
 
   return container
@@ -211,3 +217,14 @@ d3.json(
       });
   }
 );
+
+setTimeout(() => {
+  const map = document.getElementById('map');
+  const map_height = map.getBBox().height;
+
+  const map_svg = document.getElementById('world-map');
+  map_svg.style = 'height: ' + map_height + 'px;';
+  const map_container = document.getElementById('map-holder');
+  map_container.style = 'height: ' + map_height + 'px;';
+}, 700)
+
