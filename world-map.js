@@ -39,14 +39,7 @@ var svg = d3
   .attr("id", "world-map")
   ;
 
-function createDataForCountryAsHtml(name, encryption_data) {
-  const container = document.createElement('div')
-
-  const title = document.createElement('h3')
-  title.innerText = name
-  container.append(title)
-
-  /* note: encryption_data is a list of objects with a 'wep' and a 'count' attribute
+/* encryption_data is a list of objects with a 'wep' and a 'count' attribute
    * wep can be one of: 3, 2, W, Y, N, ?
    * 3 = WPA3
    * 2 = WPA2
@@ -55,6 +48,8 @@ function createDataForCountryAsHtml(name, encryption_data) {
    * N = not encrypted
    * ? = unknown
    */
+function getCountryEncryptionStats(encryption_data) {
+
   const encryption_names = {
     '3':'WPA3',
     '2':'WPA2',
@@ -68,7 +63,6 @@ function createDataForCountryAsHtml(name, encryption_data) {
     encryption_names['2'],
     encryption_names['W']
   ]
-
   const insecure_protocols = [
     encryption_names['Y'],
     encryption_names['N']
@@ -77,14 +71,18 @@ function createDataForCountryAsHtml(name, encryption_data) {
   let stats = {
     total: 0,
     total_secure: 0,
-    total_insecure: 0
+    total_insecure: 0,
+    wpa3: 0,
+    wpa2: 0,
+    wpa: 0,
+    wep: 0,
+    none: 0,
+    unknown: 0
   }
 
   for (i = 0; i < encryption_data.length; i++) {
-    const p = document.createElement('p');
     const encryption = encryption_data[i];
     const encryption_name = encryption_names[encryption.wep];
-    p.innerText = encryption_name + ': ' + encryption.count;
 
     if (secure_protocols.includes(encryption_name)) {
       stats.total += encryption.count;
@@ -93,24 +91,61 @@ function createDataForCountryAsHtml(name, encryption_data) {
     } else if (insecure_protocols.includes(encryption_name)) {
       stats.total += encryption.count;
       stats.total_insecure += encryption.count;
-      switch (encryption_name) {
-        case 'WEP':
-          stats.wep = encryption.count;
-      }
     }
-    container.append(p)
+
+    if (encryption_name === 'WPA3') {
+      stats.wpa3 = encryption.count
+    }
+    if (encryption_name === 'WPA2') {
+      stats.wpa2 = encryption.count
+    }
+    if (encryption_name === 'WPA') {
+      stats.wpa = encryption.count
+    }
+    if (encryption_name === 'WEP') {
+      stats.wep = encryption.count
+    }
+    if (encryption_name === 'None') {
+      stats.none = encryption.count
+    }
+    if (encryption_name === 'Unknown') {
+      stats.unknown = encryption.count
+    }
   }
-  console.log(stats.wep)
+  return stats;
+}
+
+function createPElementFor(name, count) {
+  if (count) {
+    const p = document.createElement('p');
+    p.innerText = name + ': ' + count;
+    return p;
+  }
+}
+
+function createDataForCountryAsHtml(name, encryption_data) {
+  const container = document.createElement('div');
+  const title = document.createElement('h3');
+  title.innerText = name;
+  container.append(title);
+
+  const stats = getCountryEncryptionStats(encryption_data);
+
   const p_score = document.createElement('p');
-  p_score.innerText = 'Security Score: ' + Math.round((stats.total_secure / stats.total - stats.total_insecure / stats.total) * 100);
-  container.insertBefore(p_score, container.childNodes[1]);
+  p_score.innerText = 'Security Score: ' + (Math.round((stats.total_secure / stats.total - stats.total_insecure / stats.total) * 100) + 100) / 2;
+  container.append(p_score);
+  console.log(stats)
+  container.append(createPElementFor('WPA3', stats.wpa3));
+  container.append(createPElementFor('WPA2', stats.wpa2));
+  container.append(createPElementFor('WPA', stats.wpa));
+  container.append(createPElementFor('WEP', stats.wep));
+  container.append(createPElementFor('None', stats.none));
 
   return container
 }
 
 // show the details for a country in the sidebar
 function showDataForCountry(iso_a2) {
-  // TODO: display details for country in #country-details container
   console.log(iso_a2 + " clicked")
   fetch('data/stats_regions_' + iso_a2 + '.json')
     .then(data => data.json()
