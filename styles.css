@@ -17,32 +17,97 @@ td {
 }
 
 .footer-padding {
-    padding-top: 1rem;
+  padding-top: 1rem;
 }
 
 .map-holder {
-    width: 100%;
-    display: inline-block;
+  width: 100%;
+  display: inline-block;
 }
 
 /* COPY PASTA */
+
 svg rect {
-    fill: #2A2C39;   /* map background colour */
-  }
-  .country{
-    fill: #d0d0d0;   /* country colour */
-    stroke: #2A2C39; /* country border colour */
-    stroke-width: 1; /* country border width */
-  }
-  .country-on{
-    fill: #4B5358;   /* highlight colour for selected country */
-  }
-  .countryLabel{
-    display: none;   /* hide all country labels by default */
-  }
-  .countryName{
-    fill: #000;   /* country label text colour */
-  }
-  .countryLabelBg{
-    fill: #30BCED;   /* country label background colour */
-  }
+  fill: #2A2C39;
+  /* map background colour */
+}
+
+.country {
+  fill: #d0d0d0;
+  /* country colour */
+  stroke: #2A2C39;
+  /* country border colour */
+  stroke-width: 1;
+  /* country border width */
+}
+
+.country-on {
+  fill: #4B5358;
+  /* highlight colour for selected country */
+}
+
+.countryLabel {
+  display: none;
+  /* hide all country labels by default */
+}
+
+.countryName {
+  fill: #000;
+  /* country label text colour */
+}
+
+.countryLabelBg {
+  fill: #30BCED;
+  /* country label background colour */
+}
+
+
+/* BARCHART */
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.bar {
+  fill: orange;
+}
+
+.bar:hover {
+  fill: orangered ;
+}
+
+.x.axis path {
+  display: none;
+}
+
+.d3-tip {
+  line-height: 1;
+  font-weight: bold;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border-radius: 2px;
+}
+
+/* Creates a small triangle extender for the tooltip */
+.d3-tip:after {
+  box-sizing: border-box;
+  display: inline;
+  font-size: 10px;
+  width: 100%;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.8);
+  content: "\25BC";
+  position: absolute;
+  text-align: center;
+}
+
+/* Style northward tooltips differently */
+.d3-tip.n:after {
+  margin: -1px 0 0 0;
+  top: 100%;
+  left: 0;
+}

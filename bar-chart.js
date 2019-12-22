@@ -1,0 +1,275 @@
+// set the dimensions and margins of the graph
+var margin = { top: 10, right: 30, bottom: 30, left: 40 },
+  width = 460 - margin.left - margin.right,
+  height = 400 - margin.top - margin.bottom;
+
+// append the svg object to the body of the page
+var svg2 = d3.select("#bar-chart-holder")
+  .append("svg")
+  .attr("width", "100%")
+  .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+  .attr("transform",
+    "translate(" + margin.left + "," + margin.top + ")");
+
+// get the data
+d3.json("data/all_scores.json", function (data) {
+
+  const codes = [
+    "AF",
+    "AL",
+    "DZ",
+    "AD",
+    "AO",
+    "AI",
+    "AG",
+    "AR",
+    "AM",
+    "AW",
+    "AU",
+    "AT",
+    "AZ",
+    "BS",
+    "BH",
+    "BD",
+    "BB",
+    "BY",
+    "BE",
+    "BZ",
+    "BJ",
+    "BM",
+    "BT",
+    "BO",
+    "BA",
+    "BW",
+    "BR",
+    "IO",
+    "UM",
+    "VG",
+    "BN",
+    "BG",
+    "BF",
+    "BI",
+    "KH",
+    "CM",
+    "CA",
+    "CV",
+    "KY",
+    "CF",
+    "TD",
+    "CL",
+    "CN",
+    "CO",
+    "KM",
+    "CG",
+    "CD",
+    "CK",
+    "CR",
+    "HR",
+    "CU",
+    "CY",
+    "CZ",
+    "DK",
+    "DJ",
+    "DM",
+    "DO",
+    "EC",
+    "EG",
+    "SV",
+    "GQ",
+    "ER",
+    "EE",
+    "ET",
+    "FK",
+    "FO",
+    "FJ",
+    "FI",
+    "FR",
+    "GF",
+    "GA",
+    "GM",
+    "GE",
+    "DE",
+    "GH",
+    "GI",
+    "GR",
+    "GL",
+    "GD",
+    "GT",
+    "GG",
+    "GN",
+    "GW",
+    "GY",
+    "HT",
+    "VA",
+    "HN",
+    "HK",
+    "HU",
+    "IS",
+    "IN",
+    "ID",
+    "CI",
+    "IR",
+    "IQ",
+    "IE",
+    "IM",
+    "IL",
+    "IT",
+    "JM",
+    "JP",
+    "JE",
+    "JO",
+    "KZ",
+    "KE",
+    "KI",
+    "KW",
+    "KG",
+    "LA",
+    "LV",
+    "LB",
+    "LS",
+    "LR",
+    "LY",
+    "LI",
+    "LT",
+    "LU",
+    "MK",
+    "MG",
+    "MW",
+    "MY",
+    "MV",
+    "ML",
+    "MT",
+    "MH",
+    "MR",
+    "MU",
+    "MX",
+    "FM",
+    "MD",
+    "MC",
+    "MN",
+    "ME",
+    "MS",
+    "MA",
+    "MZ",
+    "MM",
+    "NA",
+    "NP",
+    "NL",
+    "NZ",
+    "NI",
+    "NE",
+    "NG",
+    "KP",
+    "NO",
+    "OM",
+    "PK",
+    "PW",
+    "PS",
+    "PA",
+    "PG",
+    "PY",
+    "PE",
+    "PH",
+    "PL",
+    "PT",
+    "QA",
+    "XK",
+    "RO",
+    "RU",
+    "RW",
+    "SH",
+    "KN",
+    "LC",
+    "VC",
+    "WS",
+    "SM",
+    "ST",
+    "SA",
+    "SN",
+    "RS",
+    "SC",
+    "SL",
+    "SG",
+    "SK",
+    "SI",
+    "SB",
+    "SO",
+    "ZA",
+    "GS",
+    "KR",
+    "SS",
+    "ES",
+    "LK",
+    "SD",
+    "SR",
+    "SZ",
+    "SE",
+    "CH",
+    "SY",
+    "TW",
+    "TJ",
+    "TZ",
+    "TH",
+    "TL",
+    "TG",
+    "TK",
+    "TO",
+    "TT",
+    "TN",
+    "TR",
+    "TM",
+    "TC",
+    "TV",
+    "UG",
+    "UA",
+    "AE",
+    "GB",
+    "US",
+    "UY",
+    "UZ",
+    "VU",
+    "VE",
+    "VN",
+    "EH",
+    "YE",
+    "ZM",
+    "ZW"
+  ]
+  console.log(data.data)
+  // X axis: scale and draw:
+  var x = d3.scaleLinear()
+    .domain(codes)     // can use this instead of 1000 to have the max of data: d3.max(data, function(d) { return +d.price })
+    .range(codes);
+  svg2.append("g")
+    .attr("transform", "translate(0," + height + ")")
+    .call(d3.axisBottom(x));
+
+  // set the parameters for the histogram
+  var histogram = d3.histogram()
+    .value(function (d) { return d.score; })   // I need to give the vector of value
+    .domain([0, 100])  // then the domain of the graphic
+    .thresholds(x.ticks(70)); // then the numbers of bins
+
+  // And apply this function to data to get the bins
+  var bins = histogram(data.data);
+
+  // Y axis: scale and draw:
+  var y = d3.scaleLinear()
+    .range([height, 0]);
+  y.domain([0, d3.max(bins, function (d) { return d.length; })]);   // d3.hist has to be called before the Y axis obviously
+  svg2.append("g")
+    .call(d3.axisLeft(y));
+
+  // append the bar rectangles to the svg element
+  svg2.selectAll("rect")
+    .data(bins)
+    .enter()
+    .append("rect")
+    .attr("x", 1)
+    .attr("transform", function (d) { return "translate(" + x(d.x0) + "," + y(d.length) + ")"; })
+    .attr("width", function (d) { return x(d.x1) - x(d.x0) - 1; })
+    .attr("height", function (d) { return height - y(d.length); })
+    .style("fill", "#69b3a2")
+
+});

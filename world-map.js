@@ -3,7 +3,7 @@
 // Full world map is 2:1 ratio
 // Using 12:5 because we will crop top and bottom of map
 w = $("#map-holder").width();
-h = $("#map-holder").width() /12*5;
+h = $("#map-holder").width() / 12 * 5;
 
 // DEFINE FUNCTIONS/OBJECTS
 // Define map projection
@@ -51,12 +51,12 @@ var svg = d3
 function getCountryEncryptionStats(encryption_data) {
 
   const encryption_names = {
-    '3':'WPA3',
-    '2':'WPA2',
-    'W':'WPA',
-    'Y':'WEP',
-    'N':'None',
-    '?':'Unknown'
+    '3': 'WPA3',
+    '2': 'WPA2',
+    'W': 'WPA',
+    'Y': 'WEP',
+    'N': 'None',
+    '?': 'Unknown'
   };
   const secure_protocols = [
     encryption_names['3'],
@@ -156,9 +156,33 @@ function showDataForCountry(iso_a2) {
         console.log(json);
         const detailsHtml = createDataForCountryAsHtml(json.name, json.encryption);
         $('#country-details').html(detailsHtml);
-  }));
+      }));
 }
 
+const generateDataForBarChart = () => {
+  let all_scores = { data: [] }
+  let all_codes = []
+  fetch('https://restcountries.eu/rest/v2/all?fields=name;alpha2Code').then(data => {
+    data.json().then(json => {
+      json.map((country, index) => {
+        fetch('data/stats_regions_' + country.alpha2Code + '.json')
+          .then(data => data.json()
+            .then(json => {
+              const stats = getCountryEncryptionStats(json.encryption);
+              const score = (Math.round((stats.total_secure / stats.total - stats.total_insecure / stats.total) * 100) + 100) / 2;
+              if (score) {
+                all_scores.data.push({ country: country.alpha2Code, score: score });
+                all_codes.push(country.alpha2Code)
+              }
+            }));
+      })
+    })
+  })
+  // In the console of the browser, right click on the output of the next line and select 'Copy object'.
+  // Then use it for data/all_scores.json and the country list in bar-chart.js
+  setTimeout(() => { console.log(all_scores); console.log(all_codes); }, 10000);
+}
+// generateDataForBarChart();
 
 // get map data
 d3.json(
@@ -264,5 +288,5 @@ setTimeout(() => {
   map_svg.style = 'height: ' + map_height + 'px;';
   const map_container = document.getElementById('map-holder');
   map_container.style = 'height: ' + map_height + 'px;';
-}, 700)
+}, 1000)
 
