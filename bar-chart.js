@@ -270,7 +270,9 @@ d3.json("data/all_scores.json", function (data) {
   svg2.append("g")
     .call(d3.axisLeft(y));
 
-
+  var tooltip = d3.select("body").append("div")	
+    .attr("class", "tooltip")				
+    .style("opacity", 0);
 
   ///////////////////////////////////////////////////////////////////////////////////////////
   // append the bar rectangles to the svg element
@@ -283,6 +285,20 @@ d3.json("data/all_scores.json", function (data) {
     .attr("width", function(d) { return x(d.score); })
     .attr("height", y.bandwidth())
     .attr("text", "test text yeahiii")
-    .style("fill", "#69b3a2")
+    .style("fill", "darkgreen")
+    .on("mouseover", function(d) {	
+      tooltip.transition()		
+        .duration(200)		
+        .style("opacity", .9);		
+      tooltip
+        .html(d.country + "<br/> Score "  + d.score)	
+        .style("left", (d3.event.pageX+30) + "px")		
+        .style("top", (d3.event.pageY) + "px");	
+        })					
+    .on("mouseout", function(d) {		
+      tooltip.transition()		
+        .duration(500)		
+        .style("opacity", 0);
+      })
 
 });
