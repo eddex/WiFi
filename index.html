@@ -236,17 +236,44 @@
     <div class="row">
       <div class="col-md">
         <h1 id="nav-concept">Concept & design choices</h1>
+        The initial concept for this visualization was quite challenging and we had to apply some changes to it.
       </div>
     </div>
 
-    <div class="row">
+    <div class="row mt-3">
       <div class="col-md">
+        <h2>Wold map</h2>
         In our concept we wanted to visualize the security score by coloring the countries on the map.
         However, this creates a distorted picture of the real situation because bigger countries are perceived as more
         significant as small countries.
       </div>
       <div class="col-md-6">
         <img style="width:100%" src="static/concept_map.png" />
+      </div>
+    </div>
+
+    <div class="row mt-2">
+      <div class="col-md">
+        <h2>Timeline</h2>
+        There is no API endpoint that allows to check for different years on <a href="https://wigle.net/">wigle.net</a>.
+        Therefore we couldn't realize this idea.
+        Instead of creating a timeline, we created a comparison of all countries by our security score in a bar chart.
+        This chart makes it simpler to compare the scores of the different countries.
+      </div>
+      <div class="col-md-6">
+        <img style="width:100%" src="static/concept_timeline.png" />
+      </div>
+    </div>
+
+    <div class="row mt-2">
+      <div class="col-md">
+        <h2>Brand influence cartogram</h2>
+        Unfortunately D3.js doesn't provide a simple way to create cartograms like the ones on <a href="https://worldmapper.org/">worldmapper.org</a>.
+        There are examples of cartograms for D3.js but they are not well documented and therefore we couldn't find a way to make it work.
+      </div>
+      <div class="col-md-6">
+        <img style="width:100%" src="static/concept_cartogram.png" />
+        Image source: <a href="https://worldmapper.org/">worldmapper.org</a>
       </div>
     </div>
 
