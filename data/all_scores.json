@@ -1,880 +1,880 @@
 {
-    "data": [
-      {
-        "country": "AF",
-        "score": 83
-      },
-      {
-        "country": "AL",
-        "score": 98.5
-      },
-      {
-        "country": "DZ",
-        "score": 91.5
-      },
-      {
-        "country": "AD",
-        "score": 94
-      },
-      {
-        "country": "AO",
-        "score": 92.5
-      },
-      {
-        "country": "AI",
-        "score": 96.5
-      },
-      {
-        "country": "AG",
-        "score": 96
-      },
-      {
-        "country": "AR",
-        "score": 88
-      },
-      {
-        "country": "AM",
-        "score": 98
-      },
-      {
-        "country": "AW",
-        "score": 100
-      },
-      {
-        "country": "AU",
-        "score": 92
-      },
-      {
-        "country": "AT",
-        "score": 94.5
-      },
-      {
-        "country": "AZ",
-        "score": 95
-      },
-      {
-        "country": "BS",
-        "score": 90.5
-      },
-      {
-        "country": "BH",
-        "score": 95
-      },
-      {
-        "country": "BD",
-        "score": 96.5
-      },
-      {
-        "country": "BB",
-        "score": 84.5
-      },
-      {
-        "country": "BY",
-        "score": 81.5
-      },
-      {
-        "country": "BE",
-        "score": 81.5
-      },
-      {
-        "country": "BZ",
-        "score": 94
-      },
-      {
-        "country": "BJ",
-        "score": 93
-      },
-      {
-        "country": "BM",
-        "score": 84
-      },
-      {
-        "country": "BT",
-        "score": 95.5
-      },
-      {
-        "country": "BO",
-        "score": 94.5
-      },
-      {
-        "country": "BA",
-        "score": 90.5
-      },
-      {
-        "country": "BW",
-        "score": 70
-      },
-      {
-        "country": "BR",
-        "score": 89.5
-      },
-      {
-        "country": "IO",
-        "score": 90
-      },
-      {
-        "country": "UM",
-        "score": 91
-      },
-      {
-        "country": "VG",
-        "score": 94
-      },
-      {
-        "country": "BN",
-        "score": 93
-      },
-      {
-        "country": "BG",
-        "score": 94
-      },
-      {
-        "country": "BF",
-        "score": 88.5
-      },
-      {
-        "country": "BI",
-        "score": 92
-      },
-      {
-        "country": "KH",
-        "score": 96.5
-      },
-      {
-        "country": "CM",
-        "score": 80
-      },
-      {
-        "country": "CA",
-        "score": 89.5
-      },
-      {
-        "country": "CV",
-        "score": 91.5
-      },
-      {
-        "country": "KY",
-        "score": 96
-      },
-      {
-        "country": "CF",
-        "score": 68
-      },
-      {
-        "country": "TD",
-        "score": 73.5
-      },
-      {
-        "country": "CL",
-        "score": 88.5
-      },
-      {
-        "country": "CN",
-        "score": 92.5
-      },
-      {
-        "country": "CO",
-        "score": 86.5
-      },
-      {
-        "country": "KM",
-        "score": 71
-      },
-      {
-        "country": "CG",
-        "score": 36.5
-      },
-      {
-        "country": "CD",
-        "score": 66
-      },
-      {
-        "country": "CK",
-        "score": 95
-      },
-      {
-        "country": "CR",
-        "score": 93
-      },
-      {
-        "country": "HR",
-        "score": 82.5
-      },
-      {
-        "country": "CU",
-        "score": 83.5
-      },
-      {
-        "country": "CY",
-        "score": 81.5
-      },
-      {
-        "country": "CZ",
-        "score": 89
-      },
-      {
-        "country": "DK",
-        "score": 86
-      },
-      {
-        "country": "DJ",
-        "score": 93
-      },
-      {
-        "country": "DM",
-        "score": 94
-      },
-      {
-        "country": "DO",
-        "score": 92
-      },
-      {
-        "country": "EC",
-        "score": 94
-      },
-      {
-        "country": "EG",
-        "score": 93
-      },
-      {
-        "country": "SV",
-        "score": 84
-      },
-      {
-        "country": "GQ",
-        "score": 78
-      },
-      {
-        "country": "ER",
-        "score": 71.5
-      },
-      {
-        "country": "EE",
-        "score": 81.5
-      },
-      {
-        "country": "ET",
-        "score": 89.5
-      },
-      {
-        "country": "FK",
-        "score": 93.5
-      },
-      {
-        "country": "FO",
-        "score": 96.5
-      },
-      {
-        "country": "FJ",
-        "score": 96
-      },
-      {
-        "country": "FI",
-        "score": 93
-      },
-      {
-        "country": "FR",
-        "score": 87.5
-      },
-      {
-        "country": "GF",
-        "score": 100
-      },
-      {
-        "country": "GA",
-        "score": 87
-      },
-      {
-        "country": "GM",
-        "score": 92
-      },
-      {
-        "country": "GE",
-        "score": 87
-      },
-      {
-        "country": "DE",
-        "score": 94.5
-      },
-      {
-        "country": "GH",
-        "score": 95.5
-      },
-      {
-        "country": "GI",
-        "score": 86.5
-      },
-      {
-        "country": "GR",
-        "score": 90.5
-      },
-      {
-        "country": "GL",
-        "score": 96.5
-      },
-      {
-        "country": "GD",
-        "score": 95.5
-      },
-      {
-        "country": "GT",
-        "score": 72.5
-      },
-      {
-        "country": "GG",
-        "score": 92
-      },
-      {
-        "country": "GN",
-        "score": 92
-      },
-      {
-        "country": "GW",
-        "score": 100
-      },
-      {
-        "country": "GY",
-        "score": 89
-      },
-      {
-        "country": "HT",
-        "score": 91
-      },
-      {
-        "country": "VA",
-        "score": 93
-      },
-      {
-        "country": "HN",
-        "score": 86.5
-      },
-      {
-        "country": "HK",
-        "score": 100
-      },
-      {
-        "country": "HU",
-        "score": 94.5
-      },
-      {
-        "country": "IS",
-        "score": 87.5
-      },
-      {
-        "country": "IN",
-        "score": 95
-      },
-      {
-        "country": "ID",
-        "score": 97.5
-      },
-      {
-        "country": "CI",
-        "score": 93.5
-      },
-      {
-        "country": "IR",
-        "score": 92
-      },
-      {
-        "country": "IQ",
-        "score": 95.5
-      },
-      {
-        "country": "IE",
-        "score": 91.5
-      },
-      {
-        "country": "IM",
-        "score": 91
-      },
-      {
-        "country": "IL",
-        "score": 81
-      },
-      {
-        "country": "IT",
-        "score": 93
-      },
-      {
-        "country": "JM",
-        "score": 86.5
-      },
-      {
-        "country": "JP",
-        "score": 81
-      },
-      {
-        "country": "JE",
-        "score": 91.5
-      },
-      {
-        "country": "JO",
-        "score": 97
-      },
-      {
-        "country": "KZ",
-        "score": 96
-      },
-      {
-        "country": "KE",
-        "score": 90
-      },
-      {
-        "country": "KI",
-        "score": 100
-      },
-      {
-        "country": "KW",
-        "score": 92
-      },
-      {
-        "country": "KG",
-        "score": 95.5
-      },
-      {
-        "country": "LA",
-        "score": 94
-      },
-      {
-        "country": "LV",
-        "score": 92
-      },
-      {
-        "country": "LB",
-        "score": 88
-      },
-      {
-        "country": "LS",
-        "score": 87
-      },
-      {
-        "country": "LR",
-        "score": 82.5
-      },
-      {
-        "country": "LY",
-        "score": 91
-      },
-      {
-        "country": "LI",
-        "score": 89
-      },
-      {
-        "country": "LT",
-        "score": 94
-      },
-      {
-        "country": "LU",
-        "score": 88
-      },
-      {
-        "country": "MK",
-        "score": 97.5
-      },
-      {
-        "country": "MG",
-        "score": 89.5
-      },
-      {
-        "country": "MW",
-        "score": 49
-      },
-      {
-        "country": "MY",
-        "score": 89.5
-      },
-      {
-        "country": "MV",
-        "score": 86
-      },
-      {
-        "country": "ML",
-        "score": 90
-      },
-      {
-        "country": "MT",
-        "score": 93.5
-      },
-      {
-        "country": "MH",
-        "score": 98
-      },
-      {
-        "country": "MR",
-        "score": 89
-      },
-      {
-        "country": "MU",
-        "score": 92
-      },
-      {
-        "country": "MX",
-        "score": 82
-      },
-      {
-        "country": "FM",
-        "score": 91.5
-      },
-      {
-        "country": "MD",
-        "score": 96
-      },
-      {
-        "country": "MC",
-        "score": 90
-      },
-      {
-        "country": "MN",
-        "score": 92.5
-      },
-      {
-        "country": "ME",
-        "score": 94.5
-      },
-      {
-        "country": "MS",
-        "score": 88.5
-      },
-      {
-        "country": "MA",
-        "score": 87.5
-      },
-      {
-        "country": "MZ",
-        "score": 72.5
-      },
-      {
-        "country": "MM",
-        "score": 93
-      },
-      {
-        "country": "NA",
-        "score": 98
-      },
-      {
-        "country": "NP",
-        "score": 88
-      },
-      {
-        "country": "NL",
-        "score": 93
-      },
-      {
-        "country": "NZ",
-        "score": 95.5
-      },
-      {
-        "country": "NI",
-        "score": 78.5
-      },
-      {
-        "country": "NE",
-        "score": 87.5
-      },
-      {
-        "country": "NG",
-        "score": 95.5
-      },
-      {
-        "country": "KP",
-        "score": 78
-      },
-      {
-        "country": "NO",
-        "score": 90
-      },
-      {
-        "country": "OM",
-        "score": 94.5
-      },
-      {
-        "country": "PK",
-        "score": 95.5
-      },
-      {
-        "country": "PW",
-        "score": 98
-      },
-      {
-        "country": "PS",
-        "score": 88.5
-      },
-      {
-        "country": "PA",
-        "score": 84.5
-      },
-      {
-        "country": "PG",
-        "score": 89
-      },
-      {
-        "country": "PY",
-        "score": 89.5
-      },
-      {
-        "country": "PE",
-        "score": 83
-      },
-      {
-        "country": "PH",
-        "score": 96
-      },
-      {
-        "country": "PL",
-        "score": 91.5
-      },
-      {
-        "country": "PT",
-        "score": 92
-      },
-      {
-        "country": "QA",
-        "score": 79.5
-      },
-      {
-        "country": "XK",
-        "score": 92.5
-      },
-      {
-        "country": "RO",
-        "score": 92
-      },
-      {
-        "country": "RU",
-        "score": 95
-      },
-      {
-        "country": "RW",
-        "score": 91
-      },
-      {
-        "country": "SH",
-        "score": 66.5
-      },
-      {
-        "country": "KN",
-        "score": 94
-      },
-      {
-        "country": "LC",
-        "score": 90.5
-      },
-      {
-        "country": "VC",
-        "score": 94.5
-      },
-      {
-        "country": "WS",
-        "score": 95.5
-      },
-      {
-        "country": "SM",
-        "score": 95
-      },
-      {
-        "country": "ST",
-        "score": 66.5
-      },
-      {
-        "country": "SA",
-        "score": 96
-      },
-      {
-        "country": "SN",
-        "score": 77.5
-      },
-      {
-        "country": "RS",
-        "score": 93
-      },
-      {
-        "country": "SC",
-        "score": 95
-      },
-      {
-        "country": "SL",
-        "score": 62.5
-      },
-      {
-        "country": "SG",
-        "score": 94
-      },
-      {
-        "country": "SK",
-        "score": 90
-      },
-      {
-        "country": "SI",
-        "score": 92
-      },
-      {
-        "country": "SB",
-        "score": 97.5
-      },
-      {
-        "country": "SO",
-        "score": 94.5
-      },
-      {
-        "country": "ZA",
-        "score": 93
-      },
-      {
-        "country": "GS",
-        "score": 100
-      },
-      {
-        "country": "KR",
-        "score": 78.5
-      },
-      {
-        "country": "SS",
-        "score": 66
-      },
-      {
-        "country": "ES",
-        "score": 89.5
-      },
-      {
-        "country": "LK",
-        "score": 87.5
-      },
-      {
-        "country": "SD",
-        "score": 94
-      },
-      {
-        "country": "SR",
-        "score": 92.5
-      },
-      {
-        "country": "SZ",
-        "score": 97
-      },
-      {
-        "country": "SE",
-        "score": 93
-      },
-      {
-        "country": "CH",
-        "score": 95.5
-      },
-      {
-        "country": "SY",
-        "score": 88
-      },
-      {
-        "country": "TW",
-        "score": 91.5
-      },
-      {
-        "country": "TJ",
-        "score": 90
-      },
-      {
-        "country": "TZ",
-        "score": 84
-      },
-      {
-        "country": "TH",
-        "score": 91.5
-      },
-      {
-        "country": "TL",
-        "score": 100
-      },
-      {
-        "country": "TG",
-        "score": 88.5
-      },
-      {
-        "country": "TK",
-        "score": 66.5
-      },
-      {
-        "country": "TO",
-        "score": 96.5
-      },
-      {
-        "country": "TT",
-        "score": 93
-      },
-      {
-        "country": "TN",
-        "score": 89.5
-      },
-      {
-        "country": "TR",
-        "score": 95.5
-      },
-      {
-        "country": "TM",
-        "score": 92.5
-      },
-      {
-        "country": "TC",
-        "score": 96
-      },
-      {
-        "country": "TV",
-        "score": 100
-      },
-      {
-        "country": "UG",
-        "score": 87
-      },
-      {
-        "country": "UA",
-        "score": 95
-      },
-      {
-        "country": "AE",
-        "score": 93.5
-      },
-      {
-        "country": "GB",
-        "score": 91
-      },
-      {
-        "country": "US",
-        "score": 86
-      },
-      {
-        "country": "UY",
-        "score": 95
-      },
-      {
-        "country": "UZ",
-        "score": 98.5
-      },
-      {
-        "country": "VU",
-        "score": 68
-      },
-      {
-        "country": "VE",
-        "score": 84.5
-      },
-      {
-        "country": "VN",
-        "score": 97.5
-      },
-      {
-        "country": "EH",
-        "score": 86.5
-      },
-      {
-        "country": "YE",
-        "score": 80.5
-      },
-      {
-        "country": "ZM",
-        "score": 88
-      },
-      {
-        "country": "ZW",
-        "score": 95.5
-      }
-    ]
-  }
+  "data": [
+    {
+      "country": "Afghanistan",
+      "score": 83
+    },
+    {
+      "country": "Albania",
+      "score": 98.5
+    },
+    {
+      "country": "Algeria",
+      "score": 91.5
+    },
+    {
+      "country": "Andorra",
+      "score": 94
+    },
+    {
+      "country": "Angola",
+      "score": 92.5
+    },
+    {
+      "country": "Anguilla",
+      "score": 96.5
+    },
+    {
+      "country": "Antigua and Barbuda",
+      "score": 96
+    },
+    {
+      "country": "Argentina",
+      "score": 88
+    },
+    {
+      "country": "Armenia",
+      "score": 98
+    },
+    {
+      "country": "Australia",
+      "score": 92
+    },
+    {
+      "country": "Aruba",
+      "score": 100
+    },
+    {
+      "country": "Azerbaijan",
+      "score": 95
+    },
+    {
+      "country": "Austria",
+      "score": 94.5
+    },
+    {
+      "country": "Bahamas",
+      "score": 90.5
+    },
+    {
+      "country": "Bahrain",
+      "score": 95
+    },
+    {
+      "country": "Bangladesh",
+      "score": 96.5
+    },
+    {
+      "country": "Barbados",
+      "score": 84.5
+    },
+    {
+      "country": "Belarus",
+      "score": 81.5
+    },
+    {
+      "country": "Belgium",
+      "score": 81.5
+    },
+    {
+      "country": "Belize",
+      "score": 94
+    },
+    {
+      "country": "Benin",
+      "score": 93
+    },
+    {
+      "country": "Bermuda",
+      "score": 84
+    },
+    {
+      "country": "Bhutan",
+      "score": 95.5
+    },
+    {
+      "country": "Bolivia (Plurinational State of)",
+      "score": 94.5
+    },
+    {
+      "country": "Bosnia and Herzegovina",
+      "score": 90.5
+    },
+    {
+      "country": "Botswana",
+      "score": 70
+    },
+    {
+      "country": "Brazil",
+      "score": 89.5
+    },
+    {
+      "country": "British Indian Ocean Territory",
+      "score": 90
+    },
+    {
+      "country": "United States Minor Outlying Islands",
+      "score": 91
+    },
+    {
+      "country": "Virgin Islands (British)",
+      "score": 94
+    },
+    {
+      "country": "Brunei Darussalam",
+      "score": 93
+    },
+    {
+      "country": "Bulgaria",
+      "score": 94
+    },
+    {
+      "country": "Burkina Faso",
+      "score": 88.5
+    },
+    {
+      "country": "Burundi",
+      "score": 92
+    },
+    {
+      "country": "Cambodia",
+      "score": 96.5
+    },
+    {
+      "country": "Cameroon",
+      "score": 80
+    },
+    {
+      "country": "Canada",
+      "score": 89.5
+    },
+    {
+      "country": "Cabo Verde",
+      "score": 91.5
+    },
+    {
+      "country": "Cayman Islands",
+      "score": 96
+    },
+    {
+      "country": "Central African Republic",
+      "score": 68
+    },
+    {
+      "country": "Chad",
+      "score": 73.5
+    },
+    {
+      "country": "Chile",
+      "score": 88.5
+    },
+    {
+      "country": "China",
+      "score": 92.5
+    },
+    {
+      "country": "Colombia",
+      "score": 86.5
+    },
+    {
+      "country": "Comoros",
+      "score": 71
+    },
+    {
+      "country": "Congo",
+      "score": 36.5
+    },
+    {
+      "country": "Congo (Democratic Republic of the)",
+      "score": 66
+    },
+    {
+      "country": "Cook Islands",
+      "score": 95
+    },
+    {
+      "country": "Costa Rica",
+      "score": 93
+    },
+    {
+      "country": "Croatia",
+      "score": 82.5
+    },
+    {
+      "country": "Cuba",
+      "score": 83.5
+    },
+    {
+      "country": "Cyprus",
+      "score": 81.5
+    },
+    {
+      "country": "Czech Republic",
+      "score": 89
+    },
+    {
+      "country": "Denmark",
+      "score": 86
+    },
+    {
+      "country": "Djibouti",
+      "score": 93
+    },
+    {
+      "country": "Dominica",
+      "score": 94
+    },
+    {
+      "country": "Dominican Republic",
+      "score": 92
+    },
+    {
+      "country": "Ecuador",
+      "score": 94
+    },
+    {
+      "country": "Egypt",
+      "score": 93
+    },
+    {
+      "country": "El Salvador",
+      "score": 84
+    },
+    {
+      "country": "Equatorial Guinea",
+      "score": 78
+    },
+    {
+      "country": "Eritrea",
+      "score": 71.5
+    },
+    {
+      "country": "Estonia",
+      "score": 81.5
+    },
+    {
+      "country": "Ethiopia",
+      "score": 89.5
+    },
+    {
+      "country": "Falkland Islands (Malvinas)",
+      "score": 93.5
+    },
+    {
+      "country": "Faroe Islands",
+      "score": 96.5
+    },
+    {
+      "country": "Fiji",
+      "score": 96
+    },
+    {
+      "country": "Finland",
+      "score": 93
+    },
+    {
+      "country": "France",
+      "score": 87.5
+    },
+    {
+      "country": "French Guiana",
+      "score": 100
+    },
+    {
+      "country": "Gabon",
+      "score": 87
+    },
+    {
+      "country": "Gambia",
+      "score": 92
+    },
+    {
+      "country": "Georgia",
+      "score": 87
+    },
+    {
+      "country": "Ghana",
+      "score": 95.5
+    },
+    {
+      "country": "Germany",
+      "score": 94.5
+    },
+    {
+      "country": "Gibraltar",
+      "score": 86.5
+    },
+    {
+      "country": "Greece",
+      "score": 90.5
+    },
+    {
+      "country": "Greenland",
+      "score": 96.5
+    },
+    {
+      "country": "Grenada",
+      "score": 95.5
+    },
+    {
+      "country": "Guatemala",
+      "score": 72.5
+    },
+    {
+      "country": "Guernsey",
+      "score": 92
+    },
+    {
+      "country": "Guinea",
+      "score": 92
+    },
+    {
+      "country": "Guinea-Bissau",
+      "score": 100
+    },
+    {
+      "country": "Guyana",
+      "score": 89
+    },
+    {
+      "country": "Haiti",
+      "score": 91
+    },
+    {
+      "country": "Holy See",
+      "score": 93
+    },
+    {
+      "country": "Honduras",
+      "score": 86.5
+    },
+    {
+      "country": "Hong Kong",
+      "score": 100
+    },
+    {
+      "country": "Hungary",
+      "score": 94.5
+    },
+    {
+      "country": "Iceland",
+      "score": 87.5
+    },
+    {
+      "country": "India",
+      "score": 95
+    },
+    {
+      "country": "Indonesia",
+      "score": 97.5
+    },
+    {
+      "country": "Côte d'Ivoire",
+      "score": 93.5
+    },
+    {
+      "country": "Iran (Islamic Republic of)",
+      "score": 92
+    },
+    {
+      "country": "Iraq",
+      "score": 95.5
+    },
+    {
+      "country": "Ireland",
+      "score": 91.5
+    },
+    {
+      "country": "Isle of Man",
+      "score": 91
+    },
+    {
+      "country": "Israel",
+      "score": 81
+    },
+    {
+      "country": "Italy",
+      "score": 93
+    },
+    {
+      "country": "Jamaica",
+      "score": 86.5
+    },
+    {
+      "country": "Japan",
+      "score": 81
+    },
+    {
+      "country": "Jersey",
+      "score": 91.5
+    },
+    {
+      "country": "Jordan",
+      "score": 97
+    },
+    {
+      "country": "Kazakhstan",
+      "score": 96
+    },
+    {
+      "country": "Kenya",
+      "score": 90
+    },
+    {
+      "country": "Kiribati",
+      "score": 100
+    },
+    {
+      "country": "Kuwait",
+      "score": 92
+    },
+    {
+      "country": "Kyrgyzstan",
+      "score": 95.5
+    },
+    {
+      "country": "Lao People's Democratic Republic",
+      "score": 94
+    },
+    {
+      "country": "Latvia",
+      "score": 92
+    },
+    {
+      "country": "Lebanon",
+      "score": 88
+    },
+    {
+      "country": "Lesotho",
+      "score": 87
+    },
+    {
+      "country": "Liberia",
+      "score": 82.5
+    },
+    {
+      "country": "Libya",
+      "score": 91
+    },
+    {
+      "country": "Liechtenstein",
+      "score": 89
+    },
+    {
+      "country": "Lithuania",
+      "score": 94
+    },
+    {
+      "country": "Luxembourg",
+      "score": 88
+    },
+    {
+      "country": "Macedonia (the former Yugoslav Republic of)",
+      "score": 97.5
+    },
+    {
+      "country": "Madagascar",
+      "score": 89.5
+    },
+    {
+      "country": "Malawi",
+      "score": 49
+    },
+    {
+      "country": "Malaysia",
+      "score": 89.5
+    },
+    {
+      "country": "Maldives",
+      "score": 86
+    },
+    {
+      "country": "Mali",
+      "score": 90
+    },
+    {
+      "country": "Malta",
+      "score": 93.5
+    },
+    {
+      "country": "Marshall Islands",
+      "score": 98
+    },
+    {
+      "country": "Mauritania",
+      "score": 89
+    },
+    {
+      "country": "Mauritius",
+      "score": 92
+    },
+    {
+      "country": "Mexico",
+      "score": 82
+    },
+    {
+      "country": "Micronesia (Federated States of)",
+      "score": 91.5
+    },
+    {
+      "country": "Moldova (Republic of)",
+      "score": 96
+    },
+    {
+      "country": "Monaco",
+      "score": 90
+    },
+    {
+      "country": "Mongolia",
+      "score": 92.5
+    },
+    {
+      "country": "Montenegro",
+      "score": 94.5
+    },
+    {
+      "country": "Montserrat",
+      "score": 88.5
+    },
+    {
+      "country": "Morocco",
+      "score": 87.5
+    },
+    {
+      "country": "Mozambique",
+      "score": 72.5
+    },
+    {
+      "country": "Myanmar",
+      "score": 93
+    },
+    {
+      "country": "Namibia",
+      "score": 98
+    },
+    {
+      "country": "Nepal",
+      "score": 88
+    },
+    {
+      "country": "Netherlands",
+      "score": 93
+    },
+    {
+      "country": "New Zealand",
+      "score": 95.5
+    },
+    {
+      "country": "Nicaragua",
+      "score": 78.5
+    },
+    {
+      "country": "Niger",
+      "score": 87.5
+    },
+    {
+      "country": "Nigeria",
+      "score": 95.5
+    },
+    {
+      "country": "Korea (Democratic People's Republic of)",
+      "score": 78
+    },
+    {
+      "country": "Norway",
+      "score": 90
+    },
+    {
+      "country": "Oman",
+      "score": 94.5
+    },
+    {
+      "country": "Pakistan",
+      "score": 95.5
+    },
+    {
+      "country": "Palau",
+      "score": 98
+    },
+    {
+      "country": "Palestine, State of",
+      "score": 88.5
+    },
+    {
+      "country": "Panama",
+      "score": 84.5
+    },
+    {
+      "country": "Papua New Guinea",
+      "score": 89
+    },
+    {
+      "country": "Paraguay",
+      "score": 89.5
+    },
+    {
+      "country": "Peru",
+      "score": 83
+    },
+    {
+      "country": "Philippines",
+      "score": 96
+    },
+    {
+      "country": "Poland",
+      "score": 91.5
+    },
+    {
+      "country": "Portugal",
+      "score": 92
+    },
+    {
+      "country": "Qatar",
+      "score": 79.5
+    },
+    {
+      "country": "Republic of Kosovo",
+      "score": 92.5
+    },
+    {
+      "country": "Romania",
+      "score": 92
+    },
+    {
+      "country": "Russian Federation",
+      "score": 95
+    },
+    {
+      "country": "Rwanda",
+      "score": 91
+    },
+    {
+      "country": "Saint Helena, Ascension and Tristan da Cunha",
+      "score": 66.5
+    },
+    {
+      "country": "Saint Kitts and Nevis",
+      "score": 94
+    },
+    {
+      "country": "Saint Lucia",
+      "score": 90.5
+    },
+    {
+      "country": "Saint Vincent and the Grenadines",
+      "score": 94.5
+    },
+    {
+      "country": "Samoa",
+      "score": 95.5
+    },
+    {
+      "country": "San Marino",
+      "score": 95
+    },
+    {
+      "country": "Sao Tome and Principe",
+      "score": 66.5
+    },
+    {
+      "country": "Saudi Arabia",
+      "score": 96
+    },
+    {
+      "country": "Senegal",
+      "score": 77.5
+    },
+    {
+      "country": "Seychelles",
+      "score": 95
+    },
+    {
+      "country": "Serbia",
+      "score": 93
+    },
+    {
+      "country": "Singapore",
+      "score": 94
+    },
+    {
+      "country": "Sierra Leone",
+      "score": 62.5
+    },
+    {
+      "country": "Slovakia",
+      "score": 90
+    },
+    {
+      "country": "Slovenia",
+      "score": 92
+    },
+    {
+      "country": "Solomon Islands",
+      "score": 97.5
+    },
+    {
+      "country": "Somalia",
+      "score": 94.5
+    },
+    {
+      "country": "South Africa",
+      "score": 93
+    },
+    {
+      "country": "South Georgia and the South Sandwich Islands",
+      "score": 100
+    },
+    {
+      "country": "Korea (Republic of)",
+      "score": 78.5
+    },
+    {
+      "country": "South Sudan",
+      "score": 66
+    },
+    {
+      "country": "Spain",
+      "score": 89.5
+    },
+    {
+      "country": "Sri Lanka",
+      "score": 87.5
+    },
+    {
+      "country": "Sudan",
+      "score": 94
+    },
+    {
+      "country": "Suriname",
+      "score": 92.5
+    },
+    {
+      "country": "Swaziland",
+      "score": 97
+    },
+    {
+      "country": "Sweden",
+      "score": 93
+    },
+    {
+      "country": "Switzerland",
+      "score": 95.5
+    },
+    {
+      "country": "Syrian Arab Republic",
+      "score": 88
+    },
+    {
+      "country": "Taiwan",
+      "score": 91.5
+    },
+    {
+      "country": "Tajikistan",
+      "score": 90
+    },
+    {
+      "country": "Tanzania, United Republic of",
+      "score": 84
+    },
+    {
+      "country": "Thailand",
+      "score": 91.5
+    },
+    {
+      "country": "Togo",
+      "score": 88.5
+    },
+    {
+      "country": "Tokelau",
+      "score": 66.5
+    },
+    {
+      "country": "Timor-Leste",
+      "score": 100
+    },
+    {
+      "country": "Tonga",
+      "score": 96.5
+    },
+    {
+      "country": "Trinidad and Tobago",
+      "score": 93
+    },
+    {
+      "country": "Tunisia",
+      "score": 89.5
+    },
+    {
+      "country": "Turkey",
+      "score": 95.5
+    },
+    {
+      "country": "Turkmenistan",
+      "score": 92.5
+    },
+    {
+      "country": "Turks and Caicos Islands",
+      "score": 96
+    },
+    {
+      "country": "Tuvalu",
+      "score": 100
+    },
+    {
+      "country": "Uganda",
+      "score": 87
+    },
+    {
+      "country": "Ukraine",
+      "score": 95
+    },
+    {
+      "country": "United Kingdom of Great Britain and Northern Ireland",
+      "score": 91
+    },
+    {
+      "country": "United Arab Emirates",
+      "score": 93.5
+    },
+    {
+      "country": "United States of America",
+      "score": 86
+    },
+    {
+      "country": "Uruguay",
+      "score": 95
+    },
+    {
+      "country": "Uzbekistan",
+      "score": 98.5
+    },
+    {
+      "country": "Vanuatu",
+      "score": 68
+    },
+    {
+      "country": "Venezuela (Bolivarian Republic of)",
+      "score": 84.5
+    },
+    {
+      "country": "Viet Nam",
+      "score": 97.5
+    },
+    {
+      "country": "Western Sahara",
+      "score": 86.5
+    },
+    {
+      "country": "Yemen",
+      "score": 80.5
+    },
+    {
+      "country": "Zambia",
+      "score": 88
+    },
+    {
+      "country": "Zimbabwe",
+      "score": 95.5
+    }
+  ]
+}
