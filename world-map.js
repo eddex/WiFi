@@ -161,7 +161,6 @@ function showDataForCountry(iso_a2) {
 
 const generateDataForBarChart = () => {
   let all_scores = { data: [] }
-  let all_codes = []
   fetch('https://restcountries.eu/rest/v2/all?fields=name;alpha2Code').then(data => {
     data.json().then(json => {
       json.map((country, index) => {
@@ -171,8 +170,8 @@ const generateDataForBarChart = () => {
               const stats = getCountryEncryptionStats(json.encryption);
               const score = (Math.round((stats.total_secure / stats.total - stats.total_insecure / stats.total) * 100) + 100) / 2;
               if (score) {
-                all_scores.data.push({ country: country.alpha2Code, score: score });
-                all_codes.push(country.alpha2Code)
+                all_scores.data.push({ country: country.name, score: score });
+                console.log(country)
               }
             }));
       })
@@ -180,9 +179,9 @@ const generateDataForBarChart = () => {
   })
   // In the console of the browser, right click on the output of the next line and select 'Copy object'.
   // Then use it for data/all_scores.json and the country list in bar-chart.js
-  setTimeout(() => { console.log(all_scores); console.log(all_codes); }, 10000);
+  setTimeout(() => { console.log(all_scores) }, 10000);
 }
-// generateDataForBarChart();
+//generateDataForBarChart();
 
 // get map data
 d3.json(
