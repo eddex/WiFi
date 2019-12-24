@@ -33,7 +33,7 @@ svg rect {
 }
 
 .country {
-  fill: #1A1C29;
+  fill: rgb(141, 141, 141);
   /* country colour */
   stroke: #d0d0d0;
   /* country border colour */
@@ -52,11 +52,11 @@ svg rect {
 }
 
 .countryName {
-  fill: #209CAD;
+  fill: #000;
   /* country label text colour */
 }
 
 .countryLabelBg {
-  fill: #1A1C29;
+  fill: #d0d0d0;
   /* country label background colour */
 }
