@@ -197,7 +197,14 @@
         <h2>Wold map</h2>
         In our concept we wanted to visualize the security score by coloring the countries on the map.
         However, this creates a distorted picture of the real situation because bigger countries are perceived as more
-        significant as small countries.
+        significant as small countries. 
+        <br/>
+        <br/>
+        The values are mapped and normalized by using the security score. 
+        The were no visual variables used in the map, with the intention to encourage the readers to explore the map.
+        Tuftes data-ink-ratio is not as high as it it would be in other charts. 
+        While a single country represents mutiple values, there is still a lot of space which is only used as geographical context. 
+        To easily distinguish countrys, while not having any geographical knowledge, a hover effect which shows the countrys name is implemented.  
       </div>
       <div class="col-md-6">
         <img style="width:100%" src="static/concept_map.png" />
@@ -206,11 +213,17 @@
 
     <div class="row mt-2">
       <div class="col-md">
-        <h2>Timeline</h2>
+        <h2>Timeline (changed to country comparison)</h2>
         There is no API endpoint that allows to check for different years on <a href="https://wigle.net/">wigle.net</a>.
         Therefore we couldn't realize this idea.
         Instead of creating a timeline, we created a comparison of all countries by our security score in a bar chart.
         This chart makes it simpler to compare the scores of the different countries.
+        <br/>
+        <br/>
+        The length acts as a visual variable to distinguish the countrys with a low security score from the countrys with a high security score. 
+        Additionaly a hover effect which shows the countrys name and security score was implemented.
+        The data-ink-ratio is as minimal as possible and conforms perfectly to tuftes principals.
+        Since this is a simple and easy to understand chart, we did not provide any view manipulations.
       </div>
       <div class="col-md-6">
         <img style="width:100%" src="static/concept_timeline.png" />
@@ -242,8 +255,23 @@
       </div>
     </div>
 
+    <div class="row">
+      <div class="col-md">
+        <h1 id="nav-concept">Insight</h1>
+        Surprisingly, access points around the world are usually well secured. There are very few who do not protect themselves sufficiently.
+        <br/> 
+        But it is noticeable that especially in countries where we have only little data, high security scores have always been achieved. 
+        <br/>
+        These countries also have a very high number of access points with unknown encryption.
+        <br/> 
+        We assume that these are not sufficiently protected, but we cannot prove this. 
+        Therefore we have omitted them when calculating the security score.
+        <br/>
+        In general, however, we can say that people usually protect themselves well enough and can certainly choose the right encryption with the support of the Internet.
+      </div>
+    </div>
   </div>
-
+  
   <div class="row">
     <div class="col-md">
       <hr>
